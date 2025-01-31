@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetary system with music</title>
+    <link rel="stylesheet" href="assets with stars.css">
+<body>
+
+    <div class="stars">
+        <script>
+            for (let i = 0; i < 100; i++) {
+                let star = document.createElement("span");
+                let size = Math.random() * 3;
+                star.style.width = size + "px";
+                star.style.height = size + "px";
+                star.style.top = Math.random() * 100 + "%";
+                star.style.left = Math.random() * 100 + "%";
+                star.style.animationDuration = (Math.random() * 2 + 1) + "s";
+                document.querySelector(".stars").appendChild(star);
+            }
+        </script>
+    </div>
+
+    <div class="audio">
+        <audio controls autoplay
+        ><source src="Cyberpunk 2077 OST - The Rebel Path (Cello Version)(MP3_320K).mp3" type="audio/MP3"></audio>
+    </div>
+
+    <div class="solar-system">
+        <div class="sun"></div>
+
+        <div class="orbit mercury">
+            <div class="planet mercury"></div>
+        </div>
+
+        <div class="orbit venus">
+            <div class="planet venus"></div>
+        </div>
+
+        <div class="orbit earth">
+            <div class="planet earth">
+                <div class="orbit moon">
+                    <div class="planet moon"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="orbit mars">
+            <div class="planet mars"></div>
+        </div>
+    </div>
+</body>
+</html>
